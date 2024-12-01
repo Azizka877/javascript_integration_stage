@@ -1,0 +1,282 @@
+
+@media (min-width: 1024px) {
+    .banner {
+        height: 600px; 
+    }
+    .banner .banner-paragraph {
+        text-align: left; 
+        align-items: flex-start;
+        max-width: 600px;
+    }
+    .banner h1 {
+        font-size: 3rem;
+    }
+    .banner .banner-paragraph p {
+        font-size: 1.2rem;
+    }
+    .banner .banner-paragraph a {
+        font-size: 1.2rem;
+    }
+    /* debut responsive teacher */
+    .teacher {
+        width: 22%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1023px) {
+    body {
+        padding-left: 0;
+    }
+    .navbar{
+        margin-bottom: 0;
+    }
+    .navbar .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        transform: translateX(-100%);
+    }
+    .navbar::before {
+        display: none;
+    }
+    .navbar.active .nav-links {
+        transform: translateX(0);
+    }
+
+    .navbar .nav-links li {
+        margin: 20px 0;
+    }
+    .phone-icone-span{
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 0;
+    }
+        /* ================Debut Section Banniere============================= */
+
+    .banner {
+        height: auto; 
+        padding-right: 0;
+        padding: 40px 20px;
+    }
+    .banner .banner-paragraph {
+        max-width: 90%; 
+    }
+    .banner h1 {
+        font-size: 2rem; 
+    }
+    .banner .banner-paragraph p {
+        font-size: 0.9rem;
+    }
+    .banner .banner-paragraph a {
+        font-size: 0.9rem;
+    }
+    /* ================Debut Section Teacher============================= */
+    .teacher {
+        width: 45%;
+    }
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        max-width: 90%; 
+    }
+        /* ================Debut Section Contact============================= */
+
+    .section_contact {
+        flex-direction: column; 
+        align-items: center;
+        padding: 40px 20px;
+      }
+    
+      .formulaire {
+        max-width: 100%; 
+        text-align: center; 
+      }
+    
+      .formulaire form input,
+      .formulaire form textarea {
+        font-size: 0.9rem; 
+      }
+    
+      .contact_image {
+        max-width: 100%; 
+      }
+    
+      .contact_image img {
+        max-width: 80%; 
+      }
+      /* Fin Partie contact */
+
+        /* ================Debut Section Footer============================= */
+
+      .footer {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+      }
+    
+      .footer-section {
+        max-width: 100%; 
+      }
+    
+      .footer-section h3 {
+        font-size: 1.2rem; 
+      }
+    
+      .footer-section p,
+      .footer-section ul li a {
+        font-size: 0.8rem; 
+      }
+     
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 499px) {
+    body {
+        padding-left: 0;
+    }
+    .navbar{
+        margin-bottom: 0;
+    }
+    .navbar .logo a{
+        align-self: start;
+    }
+    .navbar .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        transform: translateX(-100%);
+    }
+
+    .navbar::before {
+        display: none;
+    }
+
+    .navbar.active .nav-links {
+        transform: translateX(0);
+    }
+
+    .navbar .nav-links li {
+        margin: 20px 0;
+    }
+    .phone-icone-span{
+        display: none;
+    }
+    .numero{
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 0;
+    }
+    .hamburger .bar{
+        width: 20px;
+        height: 2px;
+    }
+
+
+    /* ====Debut section  banniere==================================== */
+    .banner {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .banner .banner-paragraph {
+        max-width: 100%;
+        padding-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .banner h1 {
+        font-size: 1.5rem;
+    }
+    .banner .banner-paragraph p {
+        font-size: 0.8rem;
+    }
+    .banner .banner-paragraph a {
+        font-size: 0.8rem;
+        padding: 8px 16px; 
+    }
+    /*======= responsivite teachers============================== */
+    .teacher {
+        width: 100%;
+    }
+
+    .liens-prof {
+        flex-direction: column;
+    }
+
+    .images-prof {
+        width: 100%;
+    }
+
+    .titre-prof {
+        font-size: 1em;
+    }
+    /* ==== responsivite Cours ======================== */
+   
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        max-width: 90%; 
+    }
+    /* ==== responsivite Contact ======================== */
+    .section_contact{
+        padding: 40px 20px;
+    }
+    .formulaire h1 {
+        font-size: 1.5rem; 
+      }
+    
+      .formulaire p {
+        font-size: 1rem; 
+      }
+    
+      .formulaire form input,
+      .formulaire form textarea {
+        font-size: 0.8rem; 
+      }
+    
+      .contact_image img {
+        max-width: 100%; 
+      }
+      /* ==== responsivite Footer ======================== */
+      .footer{
+        padding-left: 50px;
+      }
+      .footer-section p {
+        font-size: 0.75rem; 
+      }
+    
+      .footer-section ul li a {
+        font-size: 0.75rem;
+      }
+}
