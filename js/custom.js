@@ -1,5 +1,5 @@
 // ======================Ajout de la navigation responsive avec le button hamburger=====================
-
+const menuIcon = document.getElementById('menuIcon');
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelector(".nav-links");
 const navbar = document.querySelector(".navbar");
@@ -15,7 +15,6 @@ navLinkItems.forEach(link => {
         navLinkItems.forEach(link => link.classList.remove("active"));
         
         e.target.classList.add("active");
-        
         navbar.classList.remove("active");
         hamburger.classList.remove("active");
     });
@@ -45,13 +44,13 @@ fetch('api/teacher.json')
                 <p class="para-prof">${teacher.description}</p>
                 <hr>
                 <div class="liens-prof">
-                    <a href="${teacher.socials.facebook}" target="_blank">Facebook</a>
-                    <a href="${teacher.socials.twitter}" target="_blank">Twitter</a>
-                    <a href="${teacher.socials.linkedin}" target="_blank">LinkedIn</a>
-                    <a href="${teacher.socials.instagram}" target="_blank">Instagram</a>
-                    <a href="${teacher.socials.gmail}" target="_blank">Gmail</a>
-                    <a href="${teacher.socials.mail}" target="_blank">Mail</a>
-                    <a href="${teacher.socials.behance}" target="_blank">Behance</a>
+                    <a href="${teacher.socials[0].facebook}" target="_blank"> <i class="fab fa-facebook"></i> </a>
+                    <a href="${teacher.socials[0].twitter}" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="${teacher.socials[0].linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="${teacher.socials[0].instagram}" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="${teacher.socials[0].gmail}" target="_blank"><i class="fab fa-g"></i></a>
+                    <a href="${teacher.socials[0].mail}" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="${teacher.socials[0].behance}" target="_blank"><i class="fab fa-behance"></i></a>
                 </div>
             </div>
             `;

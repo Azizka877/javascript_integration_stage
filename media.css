@@ -1,5 +1,12 @@
 
 @media (min-width: 1024px) {
+
+
+    .navbar .nav-links {
+        transform: none;  
+        display: flex;     
+        justify-content: space-between; 
+    }
     .banner {
         height: 600px; 
     }
@@ -21,6 +28,7 @@
     .teacher {
         width: 22%;
     }
+    
 }
 
 @media (min-width: 500px) and (max-width: 1023px) {
@@ -28,19 +36,22 @@
         padding-left: 0;
     }
     .navbar{
-        margin-bottom: 0;
+        margin: 0;
     }
     .navbar .nav-links {
         position: absolute;
-        top: 60px;
+        top: 45px;
         left: 0;
         width: 100%;
-        background-color: #fff;
+        background-color: #fbfcf8;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 10px 0;
-        transform: translateX(-100%);
+        transform: translateX(-200%);
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+        0 1px 3px rgba(255, 255, 255, 0.5);
     }
     .navbar::before {
         display: none;
@@ -50,10 +61,16 @@
     }
 
     .navbar .nav-links li {
-        margin: 20px 0;
+        margin: 15px 0;
+    }
+    .navbar .nav-links li a{
+      padding: 5px 40px 5px 40px;
+    border-radius: 15px;
     }
     .phone-icone-span{
-        display: none;
+        width: 25px;
+        height: 25px;
+    
     }
 
     .hamburger {
@@ -61,7 +78,7 @@
         position: absolute;
         right: 0;
     }
-        /* ================Debut Section Banniere============================= */
+/* ================Debut Section Banniere============================= */
 
     .banner {
         height: auto; 
@@ -80,19 +97,27 @@
     .banner .banner-paragraph a {
         font-size: 0.9rem;
     }
-    /* ================Debut Section Teacher============================= */
+/* ================Debut Section Teacher============================= */
     .teacher {
         width: 45%;
     }
+    .teacher:hover {
+        transform: scale(1.2);
+    }
+
     .image-container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .image {
         max-width: 90%; 
     }
-        /* ================Debut Section Contact============================= */
+    .liens-prof a {
+        flex: 0 0 24%; 
+    }
+   /* ================Debut Section Contact============================= */
 
     .section_contact {
         flex-direction: column; 
@@ -151,26 +176,28 @@
 
 
 @media (max-width: 499px) {
-    body {
-        padding-left: 0;
-    }
+  
     .navbar{
         margin-bottom: 0;
     }
+    .phone_wrapper{
+        display: flex;
+      }
     .navbar .logo a{
         align-self: start;
     }
     .navbar .nav-links {
         position: absolute;
-        top: 60px;
+        top: 45px;
         left: 0;
         width: 100%;
         background-color: #fff;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px 0;
-        transform: translateX(-100%);
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 
+        0 1px 3px rgba(255, 255, 255, 0.9);
+        transform: translateX(-200%);
     }
 
     .navbar::before {
@@ -182,8 +209,15 @@
     }
 
     .navbar .nav-links li {
-        margin: 20px 0;
+        margin: 15px 15px;
+        text-align: center;
     }
+.navbar .nav-links li a { 
+    padding: 5px 40px 5px 40px;
+    border-radius: 10px;
+    display: flex;
+}
+
     .phone-icone-span{
         display: none;
     }
@@ -195,11 +229,7 @@
         position: absolute;
         right: 0;
     }
-    .hamburger .bar{
-        width: 20px;
-        height: 2px;
-    }
-
+    
 
     /* ====Debut section  banniere==================================== */
     .banner {
@@ -227,8 +257,8 @@
         width: 100%;
     }
 
-    .liens-prof {
-        flex-direction: column;
+    .teacher:hover {
+        transform: scale(1.2);
     }
 
     .images-prof {
@@ -238,15 +268,84 @@
     .titre-prof {
         font-size: 1em;
     }
-    /* ==== responsivite Cours ======================== */
-   
-    .image-container {
-        flex-direction: column;
-        align-items: center;
+    .section-prof{
+        font-size: 10px;
+        /* font-family: sans-serif; */
     }
-
-    .image {
-        max-width: 90%; 
+    /* ==== responsivite Cours ======================== */
+   .popularCourses_title{
+    font-style: 10px;
+   }
+    .horaire{
+        position: absolute;
+        display: flex;
+        gap: 7px;
+        bottom: -1rem;
+        left: 20px;
+        color: #fff;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
+     .paragraphe1{
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    padding: 0;
+    
+    }
+    .paragraphe1 h3{
+        font-size: 1rem;
+        margin-bottom: 10px;
+        font-weight: light;
+    }
+    .container{
+        
+          margin-bottom: 10px;
+      }
+      
+    .paragraphe2{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+    .image-profil{
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      
+    }
+    .paragraphe2 img{
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        margin-bottom: 4px;
+        border-radius: 50%;
+        border: 2px solid #f4f4f4;
+        
+    }
+    
+    .paragraphe2 .price{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        color: #fff;
+        background-color: #4150B5;
+    }
+    .paragraphe2 .price1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        color: #fff;
+        background-color: #32CC93;
     }
     /* ==== responsivite Contact ======================== */
     .section_contact{
@@ -279,4 +378,19 @@
       .footer-section ul li a {
         font-size: 0.75rem;
       }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .slider .slider-item {
+        flex: 0 0 calc((100% - 20px) / 2); 
+        max-width: calc((100% - 20px) / 2);
+    }
+}
+@media (max-width: 767px) {
+    .slider .slider-item {
+        flex: 0 0 100%; 
+        max-width: 100%;
+    }
 }
